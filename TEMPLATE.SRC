@@ -5,27 +5,32 @@
 
 DEF TEMPLATE ( )  ; Function definition, TEMPLATE is the function name
 
-  ; DECLARE VARIABLES HERE
-  ; DECL GLOBAL INT my_var = 0  ; Integer variable initialized to 0
-  ; DECL GLOBAL REAL my_float = 0.0  ; Floating-point variable initialized to 0.0
-  ; DECL GLOBAL BOOL my_flag = FALSE  ; Boolean variable initialized to FALSE
+  ; FOLD VARIABLE DECLARATIONS
+  DECL E6POS my_position  ; Position variable (E6POS for 6D coordinates)
+  DECL INT my_var  ; Integer variable (no initialization)
+  DECL REAL my_float  ; Floating-point variable (no initialization)
+  DECL BOOL my_flag  ; Boolean variable (no initialization)
+  ; ENDFOLD
 
-  ; INITIALIZATION
+  ; FOLD VARIABLE INITIALIZATION
+  my_position = {X 0, Y 0, Z 0, A 0, B 0, C 0}  ; Initialize my_position with coordinates
+  my_var = 0  ; Initialize my_var to 0
+  my_float = 0.0  ; Initialize my_float to 0.0
+  my_flag = FALSE  ; Initialize my_flag to FALSE
+  ; ENDFOLD
+
+  ; FOLD TOOL AND FRAME DECLARATION
+  $TOOL = TOOL_DATA[2]  ; Set the active tool frame to TOOL_DATA[2]
+  $BASE = BASE_DATA[1]  ; Set the active base frame to BASE_DATA[1]
+  ; ENDFOLD
+
+  ; FOLD INITIALIZATION
   BAS (#INITMOV, 0)  ; Calls standard KUKA motion initialization
+  ; ENDFOLD
 
   ; PROGRAM LOGIC STARTS HERE
-  PTP HOME  ; Move to home position
 
-  ; Example of PTP movement with speed control
-  BAS (#VEL_PTP, 30)  ; Set PTP speed to 30% of max speed
-  PTP XHOME  ; Move to a predefined home position with controlled speed
-
-  ; Example of LIN movement with speed control
-  $VEL.CP = 0.5  ; Set linear speed to 0.5 m/s
-  LIN {X 500, Y 0, Z 500, A 0, B 0, C 0}  ; Move to specified coordinates
-
-  ; END PROGRAM
-  PTP HOME  ; Return to home position before stopping
-  HALT  ; Stops program execution but keeps the robot powered on
+  ; Your code here
 
 END  ; Ends the DEF TEMPLATE function
+
