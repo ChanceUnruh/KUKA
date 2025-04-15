@@ -6,26 +6,15 @@
 DEF TEMPLATE ( )  ; Function definition, TEMPLATE is the function name
 
   ; FOLD VARIABLE DECLARATIONS
-  DECL E6POS my_position  ; Position variable (E6POS for 6D coordinates)
-  DECL INT my_var  ; Integer variable (no initialization)
-  DECL REAL my_float  ; Floating-point variable (no initialization)
-  DECL BOOL my_flag  ; Boolean variable (no initialization)
   ; ENDFOLD
 
   ; FOLD VARIABLE INITIALIZATION
-  my_position = {X 0, Y 0, Z 0, A 0, B 0, C 0}  ; Initialize my_position with coordinates
-  my_var = 0  ; Initialize my_var to 0
-  my_float = 0.0  ; Initialize my_float to 0.0
-  my_flag = FALSE  ; Initialize my_flag to FALSE
   ; ENDFOLD
 
   ; FOLD TOOL AND FRAME DECLARATION
-  $TOOL = TOOL_DATA[2]  ; Set the active tool frame to TOOL_DATA[2]
-  $BASE = BASE_DATA[1]  ; Set the active base frame to BASE_DATA[1]
   ; ENDFOLD
 
   ; FOLD INITIALIZATION
-  BAS (#INITMOV, 0)  ; Calls standard KUKA motion initialization
   ; ENDFOLD
 
   ; PROGRAM LOGIC STARTS HERE
