@@ -1,22 +1,22 @@
 # KUKA KRL Logic Guide
 
 ## Comments
-```bash
+```krl
 ;YOU CAN ADD A COMMENT TO YOUR CODE WITH A SEMICOLON LIKE THIS
 ```
 
 ## Outputs
-```bash
+```krl
 $OUT [14] = FALSE ;SETS THE VALUE OF OUTPUT 14 TO FALSE
 ```
 
 ## Wait
-```bash
+```krl
 WAIT SEC 5 ;THE PROGRAM WAITS 5 SECONDS BEFORE CONTINUING 
 ```
 
 ## For Loop
-```bash
+```krl
 FOR i = 1 TO 6 ;SET i TO THE NUMBER OF TIMES YOU WANT THE FOR LOOP TO ITERATE
   $IN [1] = TRUE
   WAIT SEC 3
@@ -26,7 +26,7 @@ ENDFOR
 
 ## For Loop With Step
 
-```bash
+```krl
 DECL INT X ;DECLARE THE VARIABLE X AS AN INTEGER
 X = 0 ;SET THE INITIAL VALUE OF X TO 0
 
@@ -40,7 +40,7 @@ ENDFOR
 ; Second iteration (i = 3): X = 4
 ; Third iteration (i = 5): X = 9
 ```
-```bash
+```krl
 DECL INT X ;DECLARE THE VARIABLE X AS AN INTEGER
 X = 0 ;SET THE INITIAL VALUE OF X TO 0
 
@@ -55,7 +55,7 @@ ENDFOR
 ; Third iteration (i = 2): X = 12
 ```
 ## While Loop
-```bash
+```krl
 WHILE $IN [12] = TRUE ;WHILE INPUT 12 IS TRUE INPUT 29 IS ALSO SET TO TRUE
   $OUT [29] = TRUE
 ENDWHILE
