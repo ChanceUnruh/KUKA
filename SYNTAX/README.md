@@ -2,8 +2,9 @@
 
 ## Comments
 ```bash
-;YOU CAN COMMENT YOUR CODE WITH A SEMICOLON LIKE THIS
+;YOU CAN ADD A COMMENT TO YOUR CODE WITH A SEMICOLON LIKE THIS
 ```
+
 ## Inputs
 ```bash
 $IN [27] = TRUE ;SETS THE VALUE OF INPUT 27 TO TRUE
@@ -26,6 +27,37 @@ FOR i = 1 TO 6 ;SET i TO THE NUMBER OF TIMES YOU WANT THE FOR LOOP TO ITERATE
   WAIT SEC 3
   $INPUT [1] = FALSE
 ENDFOR
+```
+
+## For Loop With Step
+
+```bash
+DECL INT X ;DECLARE THE VARIABLE X AS AN INTEGER
+X = 0 ;SET THE INITIAL VALUE OF X TO 0
+
+FOR i = 1 TO 6 STEP 2 ;STEP 2 INCREMENTS THE FOR LOOP BY 2 EACH TIME (i = 1, 3, 5)
+    ; INCREMENT X BY i ON EACH LOOP ITERATION
+    X = i + X ;ADD THE CURRENT VALUE OF i TO X (X = i + X)
+ENDFOR
+
+; OUTPUT:
+; First iteration (i = 1): X = 1
+; Second iteration (i = 3): X = 4
+; Third iteration (i = 5): X = 9
+```
+```bash
+DECL INT X ;DECLARE THE VARIABLE X AS AN INTEGER
+X = 0 ;SET THE INITIAL VALUE OF X TO 0
+
+FOR i = 6 TO 1 STEP -2 ;STEP -2 DECREMENTS THE FOR LOOP BY 2 EACH TIME (i = 6, 4, 2)
+    ; INCREMENT X BY i ON EACH LOOP ITERATION
+    X = i + X ;ADD THE CURRENT VALUE OF i TO X (X = i + X)
+ENDFOR
+
+; OUTPUT:
+; First iteration (i = 6): X = 6
+; Second iteration (i = 4): X = 10
+; Third iteration (i = 2): X = 12
 ```
 ## While Loop
 ```bash
