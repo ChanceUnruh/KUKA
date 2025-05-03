@@ -8,7 +8,7 @@ In KUKA Robot Language (KRL), **`BAS`** stands for **Basic Settings**. It is a s
 The `BAS (#INIMOV, 0)` command initializes the robot's settings to their default values:
 - **`#INIMOV`** refers to the initial movement, essentially resetting the robot to a neutral state upon startup.
 - The argument `0` resets both the **`BASE`** and **`TOOL`** coordinates to their default (zeroed) values. This is useful for ensuring that the robot starts from a known position, with all coordinate systems and tool settings cleared.
-```bash
+```krl
 BAS (#INIMOV, 0) ;SETS THE BASE AND TOOL TO DEFAULT VALUES
 ```
 ---
@@ -17,7 +17,7 @@ BAS (#INIMOV, 0) ;SETS THE BASE AND TOOL TO DEFAULT VALUES
 The `BAS (#VEL_PTP, 100)` command sets the robot's velocity for **Point-to-Point (PTP)** movements:
 - **`#VEL_PTP`** specifies the velocity for PTP motions.
 - The value `100` sets the velocity to a default value (in percent), indicating that the robot should move at full speed during PTP movements.
-```bash
+```krl
 BAS (#VEL_PTP, 20) ;SETS THE PTP VELOCITY TO 20% OF THE MAX SPEED
 ```
 ---
@@ -26,7 +26,7 @@ BAS (#VEL_PTP, 20) ;SETS THE PTP VELOCITY TO 20% OF THE MAX SPEED
 The `BAS (#ACC_PTP, 20)` command sets the robot's acceleration for **Point-to-Point (PTP)** movements:
 - **`#ACC_PTP`** specifies the acceleration for PTP motions.
 - The value `20` defines the acceleration, with a higher value indicating quicker acceleration. This value is in percent, with 100 representing the maximum possible acceleration.
-```bash
+```krl
 BAS (#ACC_PTP, 20) ;SETS THE VALUE FOR PTP ACCELERATION TO 20% OF THE MAX SPEED
 ```
 ---
@@ -35,7 +35,7 @@ BAS (#ACC_PTP, 20) ;SETS THE VALUE FOR PTP ACCELERATION TO 20% OF THE MAX SPEED
 This command sets the robot's velocity for **Continuous Path (CP)** movements:
 - **`$VEL.CP`** controls the speed of the robot when performing CP movements (i.e., when moving along a continuous path like a linear or circular motion).
 - The value `0.2` sets the velocity to 0.2 m/s, meaning the robot will move at 20% of its maximum speed during CP operations.
-```bash
+```krl
 $VEL.CP = 0.2 ;SETS LIN AND CIRC MOVEMENT TYPES SPEED IN M/S
 ```
 ---
@@ -44,7 +44,7 @@ $VEL.CP = 0.2 ;SETS LIN AND CIRC MOVEMENT TYPES SPEED IN M/S
 The `BAS (#TOOL, 0)` command resets the robot's tool settings:
 - **`#TOOL`** refers to the robot's tool coordinate system, which defines how the robot interacts with its tool.
 - The argument `0` sets the **tool** to its default configuration (i.e., no tool or a zeroed tool frame).
-```bash
+```krl
 BAS (#TOOL, 5) ;SETS THE ACTIVE TOOL TO TOOL 5
 ```
 ---
@@ -53,7 +53,7 @@ BAS (#TOOL, 5) ;SETS THE ACTIVE TOOL TO TOOL 5
 The `BAS (#BASE, 0)` command resets the robot's base settings:
 - **`#BASE`** refers to the robot's base coordinate system, which determines the reference frame for the robot's movements.
 - The argument `0` sets the **base** to its default configuration (i.e., no offset or transformation applied).
-```bash
+```krl
 BAS (#BASE, 2) ;SETS THE ACTIVE BASE TO BASE 2
 ```
 ---
