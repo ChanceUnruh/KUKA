@@ -1,4 +1,4 @@
-# KUKA KRL Syntax Guide
+# KUKA KRL Logic Guide
 
 ## Comments
 ```bash
