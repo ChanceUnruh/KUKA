@@ -38,7 +38,7 @@ ext_axes = {A1 0.0, A2 0.0, A3 0.0, A4 0.0, A5 0.0, A6 0.0, E1 0.0, E2 0.0, E3 0
 
 ```
 
-## ARRAYS (USE INDEXED VALUES)
+## ARRAYS
 ```krl
 ;DECLARATION
 DECL INT my_int_array[1:5] ;ARRAY OF INTEGER (INDEX 1 TO 5)
