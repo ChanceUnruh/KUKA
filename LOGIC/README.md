@@ -165,12 +165,6 @@ DEF safety_zone_example( )
    ENDLOOP
 
 END
-
-DEF pause_robot()
-   HALT ;SAFELY PAUSE THE ROBOT
-   WAIT FOR NOT $IN[1] ;WAIT UNTIL SAFETY ZONE IS CLEAR
-   RESUME ;CONTINUE MAIN PROGRAM
-END
 ```
 ```krl
 DEF pause_robot()
