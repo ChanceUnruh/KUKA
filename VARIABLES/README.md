@@ -41,17 +41,10 @@ ext_axes = {A1 0.0, A2 0.0, A3 0.0, A4 0.0, A5 0.0, A6 0.0, E1 0.0, E2 0.0, E3 0
 ## ARRAYS
 ```krl
 ;DECLARATION
-DECL INT my_int_array[1:5] ;ARRAY OF INTEGER (INDEX 1 TO 5)
-DECL POS my_pos_array[1:3] ;ARRAY OF POSITIONS (3 ELEMENTS)
+DECL FRAME my_frame_array[1:3] ;ARRAY OF POSITIONS (3 ELEMENTS)
 
 ;INITIALIZATION
-my_int_array[1] = 1
-my_int_array[2] = 2
-my_int_array[3] = 3
-my_int_array[4] = 4
-my_int_array[5] = 5
-
-my_pos_array[1] = {X 100.0, Y 0.0, Z 500.0, A 0.0, B 0.0, C 0.0}
-my_pos_array[2] = {X 200.0, Y 100.0, Z 500.0, A 0.0, B 0.0, C 0.0}
-my_pos_array[3] = {X 300.0, Y 200.0, Z 500.0, A 0.0, B 0.0, C 0.0}
+my_frame_array[1] = {X 100.0, Y 0.0, Z 500.0, A 0.0, B 0.0, C 0.0}
+my_frame_array[2] = {X 200.0, Y 100.0, Z 500.0, A 0.0, B 0.0, C 0.0}
+my_frame_array[3] = {X 300.0, Y 200.0, Z 500.0, A 0.0, B 0.0, C 0.0}
 ```
